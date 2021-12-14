@@ -51,7 +51,6 @@ for number in numbers:
                 board.column_sums[i] -= number
                 if board.column_sums[i] == 0:
                     if(len(boards) > 1):
-                        print(board)
                         boards.remove(board)
                         board_removed = True
                         break
@@ -63,7 +62,6 @@ for number in numbers:
                     board.row_sums[i] -= number
                     if board.row_sums[i] == 0:
                         if(len(boards) > 1):
-                            print(board)
                             boards.remove(board)
                             break
                         print(number * sum(board.column_sums))
