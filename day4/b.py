@@ -1,5 +1,5 @@
 import sys
-from pprint import pprint
+
 
 class Board:
     def __init__(self):
@@ -11,7 +11,8 @@ class Board:
     def __repr__(self):
         return "'Board: " + "','".join(map(str, self.columns)) + "'"
 
-## import numbers and boards
+
+# import numbers and boards
 file_path = "input.txt"
 with open(file_path, 'r') as f:
     data = f.read()
@@ -30,19 +31,19 @@ for line in lines[1:]:
     b.columns.append(list(map(int, line.split())))
 boards.append(b)
 
-## create rows
+# create rows
 for board in boards:
     for i in range(0, len(board.columns[0])):
-        board.rows.append([ row[i] for row in board.columns ])
+        board.rows.append([row[i] for row in board.columns])
 
-## calculate sums
+# calculate sums
 for board in boards:
     for i in range(0, len(board.columns)):
         board.column_sums.append(sum(board.columns[i]))
     for i in range(0, len(board.rows)):
         board.row_sums.append(sum(board.rows[i]))
 
-## draw numbers
+# draw numbers
 for number in numbers:
     for board in boards[:]:
         board_removed = False

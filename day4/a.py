@@ -1,5 +1,5 @@
 import sys
-from pprint import pprint
+
 
 class Board:
     def __init__(self):
@@ -32,7 +32,7 @@ boards.append(b)
 
 for board in boards:
     for i in range(0, len(board.columns[0])):
-        board.rows.append([ row[i] for row in board.columns ])
+        board.rows.append([row[i] for row in board.columns])
 
 for board in boards:
     for i in range(0, len(board.columns)):

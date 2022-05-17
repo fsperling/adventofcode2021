@@ -4,7 +4,7 @@ with open(file_path, 'r') as f:
 
 lines = data.splitlines()
 
-position= 0
+position = 0
 depth = 0
 aim = 0
 
